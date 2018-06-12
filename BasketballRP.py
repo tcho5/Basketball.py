@@ -1,34 +1,47 @@
 import sys
 import os
-import time
-import random
+#import time
+#import random
+##import array
 
-class Player:
+class Menu:
+    def __init__(self, user):
+        self.user = user
+
+class Playerr:
     def __init__(self, name):
         self.name = name
-        self.height = 6.2
-        self.fame = 25
-        self.position = guard
+    
+def Start():
+    print("\nWe are now starting the game...\n")
+    
+    
 
 def main():
-        print("Welcome to basketballRP version 1.0!")
-        print()
+        print("Welcome to basketballRP version 1.0!\n")
         print("Please enter a valid number option")
         print("1.) Start")
         print("2.) Load")
         print("3.) Exit")
-        option = raw_input(" User Input -> ") ## 
-        if option == "1":
-            start()
-        elif option == "2":
-            pass
-            load()
-        elif option == "3":
-            print("Until next time!")
-            sys.exit
-        else:
-            main()
-        
-        
+        verify = False
+        while(verify == False):
+            command = input("User Input -> ")
+            if command == "Start":
+                Start()
+                break
+                #pass
+   #            start()
+            elif command == "Load":
+                pass
+            #load()
+            elif command == "Exit":
+                print("Until next time!")
+                break
+ ##               sys.exit
+            else:
+                print("Invalid Entry... Try again!")
+                ##break
 
+        
+            
 main()
